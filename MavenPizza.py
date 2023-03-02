@@ -1,5 +1,6 @@
 import sqlite3
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request
+from flask_paginate import Pagination, get_page_parameter
 
 app = app = Flask(__name__)
 
@@ -27,10 +28,24 @@ def index():
 
 @app.route('/orders')
 def orders():
+    page = request.args.get(get_page_parameter(), type=int, default=1)
+    per_page = 8
+    offset = (page - 1) * per_page
+
     db = get_db()
-    cur = db.execute("select * from orders")
-    rows = cur.fetchall()
-    return render_template('orders.html', rows=rows)
+    cur = db.execute("SELECT COUNT(*) FROM orders")
+    rows = cur.fetchone()[0]
+
+    cur = db.execute("SELECT * FROM orders ORDER BY id LIMIT ? OFFSET ?", (per_page, offset))
+    data = cur.fetchall()
+
+    pagination = Pagination(page=page, per_page=per_page, total=rows, css_framework='bootstrap4')
+
+    return render_template('orders.html', rows=data, pagination=pagination)
+
+
+
+
 
 @app.route('/order_details/<id>')
 def order_details(id):
