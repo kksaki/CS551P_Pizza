@@ -1,0 +1,17 @@
+<head>
+    <title>Maven Pizza Challenge: Orders</title>
+  </head>
+  <body>
+
+      <h1>Maven Pizza Challenge: Orders</h1>
+
+      {% for row in rows %}
+      <p>Order:
+         <b> <a href={{ url_for('order_details', id= row['id']) }}>{{row["id"]}}</a></b> |
+         {{row["OrderID"]}} |
+          {{ row["Date"]}} |
+          {{ row["Time"]}}
+      </p>
+      {% endfor %}
+  </body>
+  </html>

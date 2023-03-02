@@ -1,0 +1,16 @@
+<head>
+    <title>Maven Pizza Challenge: Pizzas</title>
+  </head>
+  <body>
+
+      <h1>Maven Pizza Challenge: Pizzas</h1>
+
+      {% for row in rows %}
+      <p>Pizza:
+        <b> {{row["PizzaID"]}}</b> |
+        Size: {{ row["Size"]}} |
+        Price: {{ row["Price"]}}
+     </p>
+     {% endfor %}
+  </body>
+  </html>
