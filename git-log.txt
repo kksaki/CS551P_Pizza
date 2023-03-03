@@ -1,0 +1,35 @@
+commit 7b71bfb2fd93ae64363442547b374f29b686d1bc
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 20:59:37 2023 +0000
+
+    replace the Maven_Pizza_Orders.db
+
+commit 37b31563668f02646f7c2af35070a98e5cfa172a
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 20:29:36 2023 +0000
+
+    change the database orders and order_details
+
+commit 918af3938ae2f05d184d4fb74c7adfe6aa509cdf
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 19:08:36 2023 +0000
+
+    add requirements.txt
+
+commit 4f647ebc74854ecbbdda256fcaf8c85284c665aa
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 19:01:53 2023 +0000
+
+    update css
+
+commit fd542a814daf489372301dc7b4734720091b7fd6
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 14:48:13 2023 +0000
+
+    add log
+
+commit b053e351a25af40e345cd105c21fd223cb4ae83c
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Thu Mar 2 14:31:58 2023 +0000
+
+    add init file

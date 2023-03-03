@@ -1,26 +1,61 @@
 <html>
 <head>
   <title>Maven Pizza Challenge: Order Details</title>
+  <style>
+    .order-box {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .details-box {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    
+    .line {
+      height: 1px;
+      margin: 20px 0;
+      border: none;
+      background-color: #ddd;
+    }
+    
+    .pizza-link {
+      color: #ff7f50;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="order-box">
     <h1>Maven Pizza Challenge: Order Details</h1>
-
-    <p>order:
-       <b> {{order[0]["id"]}}</b> |
-       {{order[0]["OrderID"]}} |
-       On: {{ order[0]["Date"]}} |
-       On: {{ order[0]["Time"]}}
+    
+    <p>Order:
+      <b>{{order[0]["id"]}}</b> |
+      {{order[0]["OrderID"]}} |
+      On: {{ order[0]["Date"]}} |
+      On: {{ order[0]["Time"]}}
     </p>
-
-    <p>Details of orders {{order[0]["OrderID"]}}:</p>
-
-    {% for row in rows %}
-    <p>
-       Details: {{row["id"]}} |
-       Pizza: <a href={{ url_for('pizzas', id= row['PizzaID']) }}>{{ row["PizzaID"] }} </a> |
-       Quantity: {{ row["Quantity"] }}
-    </p>
-    {% endfor %}
+    
+    
+    
+    <div class="details-box">
+      <p>Details of orders {{order[0]["OrderID"]}}:</p>
+      
+      {% for row in rows %}
+        <p>
+          Details: {{row["id"]}} |
+          Pizza: <a href={{ url_for('pizzas', id= row['PizzaID']) }} class="pizza-link">{{ row["PizzaID"] }}</a> |
+          Quantity: {{ row["Quantity"] }}
+        </p>
+        
+      {% endfor %}
+    </div>
+  </div>
 </body>
 </html>

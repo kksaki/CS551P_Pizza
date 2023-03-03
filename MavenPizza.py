@@ -2,7 +2,7 @@ import sqlite3
 from flask import Flask, g, render_template, request
 from flask_paginate import Pagination, get_page_parameter
 
-app = app = Flask(__name__)
+app = Flask(__name__)
 
 app.config.from_object(__name__)
 
