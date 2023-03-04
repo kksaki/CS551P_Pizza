@@ -5,6 +5,9 @@
 ## This application has been deployed on render and you can view it by clicking on the following link.
 https://maven-pizza-order.onrender.com
 
+**The git respson address associated with this application：**
+https://github.com/kksaki/CS551P_Pizza
+
 
 ## introduction
 

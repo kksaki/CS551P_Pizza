@@ -1,3 +1,21 @@
+commit b043ad4f2a6c27c8bda3164b53be6f6e7a67b70b
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Sat Mar 4 03:06:12 2023 +0000
+
+    change some details
+
+commit 4dede923d6554be3911aaf433469852299c75191
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Sat Mar 4 02:11:28 2023 +0000
+
+    UPDATE README
+
+commit 5b0bbc0032347e5cfe3c98007f18645275a84084
+Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
+Date:   Sat Mar 4 02:04:35 2023 +0000
+
+    add readme file
+
 commit c8748755372230ce4a26b54d2754a9b58a1d8dcb
 Author: JIAQI SUN <j.sun2.22@abdn.ac.uk>
 Date:   Fri Mar 3 19:55:43 2023 +0000
