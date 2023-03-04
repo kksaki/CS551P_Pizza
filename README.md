@@ -1,6 +1,11 @@
 
 # Parsing Maven Pizza Challenge Data with Python and Flask
 
+
+## This application has been deployed on render and you can view it by clicking on the following link.
+https://maven-pizza-order.onrender.com
+
+
 ## introduction
 
 This is a program assignment for CS551P Advanced programming, focusing on use python and flask to parse data for a web application using Maven Pizza challenge tracking data.

@@ -5,7 +5,7 @@ def nav(context):
     """ 
     Navigate to the customers page
     """
-    context.browser.get('http://localhost:5000/orders')
+    context.browser.get('https://gongvillage-apollocarrot-5000.codio-box.uk//orders')
 
 @when(u'I click on the link to customer details')
 def click(context):
@@ -19,7 +19,7 @@ def details(context):
     """ 
     if successful, then we should be directed to the customer page
     """
-    # use print(context.browser.page_source) to aid debugging
+
     print(context.browser.page_source)
-    assert context.browser.current_url == 'http://localhost:5000/order_details/2'
+    assert context.browser.current_url == 'https://gongvillage-apollocarrot-5000.codio-box.uk//order_details/2'
     assert '01595 Amanda Loaf' in context.browser.page_source
