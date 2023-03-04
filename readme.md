@@ -7,9 +7,11 @@ This is a program assignment for CS551P Advanced programming, focusing on use py
 
 The task at hand is to develop a Flask application that meets several criteria. Specifically, the application should be database-driven and contain three linked tables. Additionally, it should be based on a suitable open data source and utilize appropriate templates for the pages while employing proper error handling techniques. The codebase should make use of Git as part of the development process for source control, and suitable tests should be included. Finally, the application should be published on Render to make it accessible to users.
 
-**Datebase**
 
-We'll use data on Maven Pizza Challenge to develop our application. Data is taken from [https://www.kaggle.com/datasets/neethimohan/maven-pizza-challenge-dataset](https://www.kaggle.com/datasets/neethimohan/maven-pizza-challenge-dataset). Download the zip file and unpack it to a folder.
+### Datebase
+
+We'll use data on Maven Pizza Challenge to develop our application. Data is taken from [https://www.kaggle.com/datasets/neethimohan/maven-pizza-challenge-dataset](https://www.kaggle.com/datasets/neethimohan/maven-pizza-challenge-dataset).
+Download the zip file and unpack it to a folder.
 
 The dataset has 5 .csv files and 4 tables. We only use the orders, pizzas, and order_details tables.
 
@@ -17,6 +19,7 @@ The dataset has 5 .csv files and 4 tables. We only use the orders, pizzas, and o
 - The orders table record the datetime indicators of the 21351 orders.  We need
   to reduce it to 2501 rows.
 - The pizzas table has 97 rows containing the pricing details of pizza based on the size and pizza type.
+
 
 ## Step1
 
@@ -38,7 +41,7 @@ display the data. Create a new project folder called 'program_assignment' and
 then cd into the folder via the terminal and execute these commands:
 
 ```
-	pyenv local 3.7.0 # this sets the local version of python to 3.7.0
+	  pyenv local 3.7.0 # this sets the local version of python to 3.7.0
     python3 -m venv .venv # this creates the virtual environment for you
     source .venv/bin/activate # this activates the virtual environment
     pip install --upgrade pip [ this is optional]  # this installs pip, and upgrades it if required.
@@ -51,6 +54,7 @@ pip install flask
 ```
 
 And that will install flask with its associated dependencies. We can now start to build the application.
+
 
 ### We need to parse a csv file and add the data to a database
 
@@ -84,12 +88,12 @@ We can confirm this runs by setting a few variables in your environment via the 
 
 Tests go in a separate folder. ‘Features’ are test files, ‘driver’ hold files for browsers, ‘steps’ are directions for features
 
-**add features folder and files**
+### Add features folder and files
 
 Use ‘almost’ plain English to write something similar to acceptance tests, Given, when, then format sets the context, and what should happen
 Given, when, then format sets the context, and what should happen
 
-**Add a steps folder and files**
+### Add a steps folder and files
 
 We can now add the testing library Behave, along with Selenium for and the appropriate web drivers for your system, which you can find at [https://selenium-python.readthedocs.io/installation.html#drivers](https://selenium-python.readthedocs.io/installation.html#drivers)
 
@@ -99,7 +103,8 @@ You might want to look at the documentation for Behave [https://behave.readthedo
 pip install behave
 ```
 
-**Check the tests**
+
+### Check the tests
 
 You can run the current tests to see that the customer pages load, with the command
 
@@ -109,7 +114,8 @@ behave
 
 in the terminal.
 
-**Use environment.py for context**
+
+### Use environment.py for context
 
 You will need to download the same version of chromdriver as your current chrome browser on this page, go to this website to download and put it in ./driver directory：[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 
@@ -136,6 +142,7 @@ pip install os
 Go to your git account and create a new Repositories.
 
 ```
+git init
 git add .
 git commit -m "first commit"
 git branch -M main
@@ -143,7 +150,6 @@ git remote add origin  (https://)
 git push -u origin main
 ```
 
-git init
 
 Each time you update a file you need to do the following steps, repush to git：
 
@@ -157,18 +163,20 @@ git push origin master
 
 ### Deploy your program to render
 
-Start by creating a new account with Render (if you don't have one).
+- Start by creating a new account with Render (if you don't have one).
 
-Then, navigate to your dashboard, click on the "New +" button, and select "Web Service".
+- Then, navigate to your dashboard, click on the "New +" button, and select "Web Service".
 
-Connect your Render account to either your GitHub account.
+- Connect your Render account to either your GitHub account.
 
-Once connected, select the repository to deploy:
+- Once connected, select the repository to deploy:
 
+```
 Name: (e.g.) shopping-test
 Environment: Python3
 Build command: $ pip install -r requirements.txt
 Start command: $ gunicorn shopping:app
+```
 
 Click 'Create Web Service'
 
